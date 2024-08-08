@@ -1,0 +1,5 @@
+_workspace_packages=( ${(Q)"${(z)$(<<\EO:_workspace_packages
+'jetson_camera' 'omo_r1mini' 'omo_r1mini_ar_marker' 'omo_r1mini_description' 'omo_r1mini_bringup' 'omo_r1mini_gazebo' 'omo_r1mini_navigation' 'omo_r1mini_simple_position_controller' 'omo_r1mini_slam' 'omo_r1mini_teleop'
+EO:_workspace_packages
+)}"} )
+_workspace_cache_file_path='/home/jetson/2024-Kudos-Hackthon/catkin_ws/.catkin_tools/cache'

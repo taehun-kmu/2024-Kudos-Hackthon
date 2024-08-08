@@ -3,7 +3,7 @@
 	url = https://github.com/taehun-kmu/jetson_camera.git
 [submodule "catkin_ws/src/omo_r1mini"]
 	path = catkin_ws/src/omo_r1mini
-	url = https://github.com/taehun-kmu/omo_rimini.git
+	url = https://github.com/taehun-kmu/omo_r1mini.git
 [submodule "darknet_ws/src/darknet_ros"]
 	path = darknet_ws/src/darknet_ros
 	url = https://github.com/taehun-kmu/darknet_ros.git
