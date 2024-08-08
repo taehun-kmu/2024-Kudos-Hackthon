@@ -1012,7 +1012,13 @@ jetson_camera_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcamera_
 jsoncpp_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/jsoncpp
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/librostime.so
+lib:FILEPATH=/opt/ros/melodic/lib/libtf2.so
+
+//Value Computed by CMake
+line_follower_BINARY_DIR:STATIC=/home/jetson/2024-Kudos-Hackthon/catkin_ws/build/ros-line-follower-robot
+
+//Value Computed by CMake
+line_follower_SOURCE_DIR:STATIC=/home/jetson/2024-Kudos-Hackthon/catkin_ws/src/ros-line-follower-robot
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -1154,6 +1160,9 @@ trajectory_msgs_DIR:PATH=/opt/ros/melodic/share/trajectory_msgs/cmake
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/melodic/share/urdf/cmake
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
 
 //The directory containing a CMake configuration file for xacro.
 xacro_DIR:PATH=/opt/ros/melodic/share/xacro/cmake

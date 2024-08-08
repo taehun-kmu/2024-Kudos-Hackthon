@@ -19,22 +19,22 @@ add_custom_target(omo_r1mini_simple_position_controller_generate_messages ALL)
 
 get_filename_component(_filename "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg" NAME_WE)
 add_custom_target(_omo_r1mini_simple_position_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg" "omo_r1mini_simple_position_controller/VanillaPositionResult:std_msgs/Header:omo_r1mini_simple_position_controller/VanillaPositionFeedback:omo_r1mini_simple_position_controller/VanillaPositionActionFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:omo_r1mini_simple_position_controller/VanillaPositionActionGoal:omo_r1mini_simple_position_controller/VanillaPositionGoal:omo_r1mini_simple_position_controller/VanillaPositionActionResult"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg" "omo_r1mini_simple_position_controller/VanillaPositionGoal:omo_r1mini_simple_position_controller/VanillaPositionActionResult:omo_r1mini_simple_position_controller/VanillaPositionResult:actionlib_msgs/GoalStatus:omo_r1mini_simple_position_controller/VanillaPositionActionFeedback:omo_r1mini_simple_position_controller/VanillaPositionFeedback:std_msgs/Header:omo_r1mini_simple_position_controller/VanillaPositionActionGoal:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg" NAME_WE)
 add_custom_target(_omo_r1mini_simple_position_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg" "std_msgs/Header:omo_r1mini_simple_position_controller/VanillaPositionGoal:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg" "omo_r1mini_simple_position_controller/VanillaPositionGoal:std_msgs/Header:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg" NAME_WE)
 add_custom_target(_omo_r1mini_simple_position_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg" "actionlib_msgs/GoalID:std_msgs/Header:actionlib_msgs/GoalStatus:omo_r1mini_simple_position_controller/VanillaPositionResult"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg" "actionlib_msgs/GoalID:std_msgs/Header:omo_r1mini_simple_position_controller/VanillaPositionResult:actionlib_msgs/GoalStatus"
 )
 
 get_filename_component(_filename "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg" NAME_WE)
 add_custom_target(_omo_r1mini_simple_position_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg" "actionlib_msgs/GoalID:std_msgs/Header:omo_r1mini_simple_position_controller/VanillaPositionFeedback:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "omo_r1mini_simple_position_controller" "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg" "actionlib_msgs/GoalID:omo_r1mini_simple_position_controller/VanillaPositionFeedback:std_msgs/Header:actionlib_msgs/GoalStatus"
 )
 
 get_filename_component(_filename "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg" NAME_WE)
@@ -61,25 +61,25 @@ add_custom_target(_omo_r1mini_simple_position_controller_generate_messages_check
 _generate_msg_cpp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_cpp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_cpp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_cpp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_cpp(omo_r1mini_simple_position_controller
@@ -142,25 +142,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS omo_r1mini_simple_position_controll
 _generate_msg_eus(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_eus(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_eus(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_eus(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_eus(omo_r1mini_simple_position_controller
@@ -223,25 +223,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS omo_r1mini_simple_position_controll
 _generate_msg_lisp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_lisp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_lisp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_lisp(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_lisp(omo_r1mini_simple_position_controller
@@ -304,25 +304,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS omo_r1mini_simple_position_controll
 _generate_msg_nodejs(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_nodejs(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_nodejs(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_nodejs(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_nodejs(omo_r1mini_simple_position_controller
@@ -385,25 +385,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS omo_r1mini_simple_position_controll
 _generate_msg_py(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_py(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_py(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_py(omo_r1mini_simple_position_controller
   "/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/share/omo_r1mini_simple_position_controller/msg/VanillaPositionFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/omo_r1mini_simple_position_controller
 )
 _generate_msg_py(omo_r1mini_simple_position_controller
