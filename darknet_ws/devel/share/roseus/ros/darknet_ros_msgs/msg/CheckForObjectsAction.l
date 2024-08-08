@@ -1,0 +1,1 @@
+/home/jetson/2024-Kudos-Hackthon/darknet_ws/devel/.private/darknet_ros_msgs/share/roseus/ros/darknet_ros_msgs/msg/CheckForObjectsAction.l

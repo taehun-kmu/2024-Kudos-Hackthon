@@ -1,0 +1,7 @@
+set(omo_r1mini_teleop_SETUP_PY_SETUP_MODULE "distutils.core")
+set(omo_r1mini_teleop_SETUP_PY_VERSION "0.0.1")
+set(omo_r1mini_teleop_SETUP_PY_SCRIPTS "")
+set(omo_r1mini_teleop_SETUP_PY_PACKAGES "omo_r1mini_teleop")
+set(omo_r1mini_teleop_SETUP_PY_PACKAGE_DIRS "src/omo_r1mini_teleop")
+set(omo_r1mini_teleop_SETUP_PY_MODULES "")
+set(omo_r1mini_teleop_SETUP_PY_MODULE_DIRS "")

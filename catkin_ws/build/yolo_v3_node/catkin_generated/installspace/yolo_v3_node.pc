@@ -1,0 +1,8 @@
+prefix=/home/jetson/2024-Kudos-Hackthon/catkin_ws/install
+
+Name: yolo_v3_node
+Description: Description of yolo_v3_node
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
