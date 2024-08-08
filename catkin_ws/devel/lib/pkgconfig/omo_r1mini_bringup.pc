@@ -1,8 +1,0 @@
-prefix=/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel
-
-Name: omo_r1mini_bringup
-Description: Description of omo_r1mini_bringup
-Version: 0.0.1
-Cflags: -I/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: rospy sensor_msgs nav_msgs geometry_msgs tf usb_cam

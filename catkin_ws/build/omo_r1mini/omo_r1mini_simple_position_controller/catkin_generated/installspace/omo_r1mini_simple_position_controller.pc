@@ -1,8 +1,0 @@
-prefix=/home/jetson/2024-Kudos-Hackthon/catkin_ws/install
-
-Name: omo_r1mini_simple_position_controller
-Description: Description of omo_r1mini_simple_position_controller
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

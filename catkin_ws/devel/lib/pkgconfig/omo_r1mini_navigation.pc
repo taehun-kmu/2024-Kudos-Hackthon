@@ -1,8 +1,0 @@
-prefix=/home/jetson/2024-Kudos-Hackthon/catkin_ws/devel
-
-Name: omo_r1mini_navigation
-Description: Description of omo_r1mini_navigation
-Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

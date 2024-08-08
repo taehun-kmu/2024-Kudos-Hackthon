@@ -1,1 +1,0 @@
-/home/jetson/2024-Kudos-Hackthon/darknet_ws/devel/.private/darknet_ros_msgs/share/gennodejs/ros/darknet_ros_msgs/msg/CheckForObjectsFeedback.js
