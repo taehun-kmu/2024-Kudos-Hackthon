@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/jetson/2024-Kudos-Hackthon/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -68,6 +80,18 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -77,6 +101,17 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -99,41 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -183,79 +183,79 @@ omo_r1mini_simple_position_controller_genpy/fast:
 .PHONY : omo_r1mini_simple_position_controller_genpy/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule
+omo_r1mini_simple_position_controller_generate_messages_py: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule
 
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_py
 
 # fast build rule for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/build
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal/fast
+omo_r1mini_simple_position_controller_generate_messages_py/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/build
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_py/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_genlisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule
+rosgraph_msgs_generate_messages_cpp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_genlisp
+.PHONY : rosgraph_msgs_generate_messages_cpp
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_genlisp/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/build
-.PHONY : omo_r1mini_simple_position_controller_genlisp/fast
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule
 
 # Convenience name for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule
+omo_r1mini_simple_position_controller_gennodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule
 
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback
+.PHONY : omo_r1mini_simple_position_controller_gennodejs
 
 # fast build rule for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/build
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback/fast
+omo_r1mini_simple_position_controller_gennodejs/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/build
+.PHONY : omo_r1mini_simple_position_controller_gennodejs/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule
+actionlib_msgs_generate_messages_py: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult
+.PHONY : actionlib_msgs_generate_messages_py
 
 # fast build rule for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/build
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult/fast
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule
 
 # Convenience name for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule
+omo_r1mini_simple_position_controller_geneus: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule
 
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult
+.PHONY : omo_r1mini_simple_position_controller_geneus
 
 # fast build rule for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/build
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult/fast
+omo_r1mini_simple_position_controller_geneus/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/build
+.PHONY : omo_r1mini_simple_position_controller_geneus/fast
 
 # Convenience name for target.
 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionGoal.dir/rule:
@@ -288,94 +288,259 @@ _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPosit
 .PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionFeedback/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_generate_messages: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule
+roscpp_generate_messages_nodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_generate_messages
+.PHONY : roscpp_generate_messages_nodejs
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_generate_messages/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/build
-.PHONY : omo_r1mini_simple_position_controller_generate_messages/fast
+roscpp_generate_messages_nodejs/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule
+roscpp_generate_messages_eus: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction
+.PHONY : roscpp_generate_messages_eus
 
 # fast build rule for target.
-_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/build
-.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction/fast
+roscpp_generate_messages_eus/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_eus.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_generate_messages_lisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_lisp
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_generate_messages_lisp/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/build
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_lisp/fast
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal.dir/build
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_gennodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/rule
+actionlib_msgs_generate_messages_lisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_gennodejs
+.PHONY : actionlib_msgs_generate_messages_lisp
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_gennodejs/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gennodejs.dir/build
-.PHONY : omo_r1mini_simple_position_controller_gennodejs/fast
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_generate_messages_py: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/rule
+actionlib_msgs_generate_messages_eus: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_py
+.PHONY : actionlib_msgs_generate_messages_eus
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_generate_messages_py/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_py.dir/build
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_py/fast
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_generate_messages_cpp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule
+roscpp_generate_messages_lisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_cpp
+.PHONY : roscpp_generate_messages_lisp
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_generate_messages_cpp/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/build
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_cpp/fast
+roscpp_generate_messages_lisp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+omo_r1mini_simple_position_controller_generate_messages_nodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule
+
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_nodejs
+
+# fast build rule for target.
+omo_r1mini_simple_position_controller_generate_messages_nodejs/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/build
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_nodejs/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule
+
+# Convenience name for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/rule
+
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult
+
+# fast build rule for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult.dir/build
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_py.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_nodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_nodejs/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_gencpp.dir/rule:
@@ -408,34 +573,169 @@ omo_r1mini_simple_position_controller_generate_messages_eus/fast:
 .PHONY : omo_r1mini_simple_position_controller_generate_messages_eus/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_geneus: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/rule
+actionlib_generate_messages_nodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_geneus
+.PHONY : actionlib_generate_messages_nodejs
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_geneus/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_geneus.dir/build
-.PHONY : omo_r1mini_simple_position_controller_geneus/fast
+actionlib_generate_messages_nodejs/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
-omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule
-.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule
 
 # Convenience name for target.
-omo_r1mini_simple_position_controller_generate_messages_nodejs: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/rule
+omo_r1mini_simple_position_controller_generate_messages: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/rule
 
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_nodejs
+.PHONY : omo_r1mini_simple_position_controller_generate_messages
 
 # fast build rule for target.
-omo_r1mini_simple_position_controller_generate_messages_nodejs/fast:
-	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_nodejs.dir/build
-.PHONY : omo_r1mini_simple_position_controller_generate_messages_nodejs/fast
+omo_r1mini_simple_position_controller_generate_messages/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages.dir/build
+.PHONY : omo_r1mini_simple_position_controller_generate_messages/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule
+
+# Convenience name for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/rule
+
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction
+
+# fast build rule for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction.dir/build
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule
+
+# Convenience name for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/rule
+
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult
+
+# fast build rule for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult.dir/build
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule
+
+# Convenience name for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/rule
+
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback
+
+# fast build rule for target.
+_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/_omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback.dir/build
+.PHONY : _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_py.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+omo_r1mini_simple_position_controller_generate_messages_cpp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/rule
+
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_cpp
+
+# fast build rule for target.
+omo_r1mini_simple_position_controller_generate_messages_cpp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_cpp.dir/build
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_cpp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_eus.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+omo_r1mini_simple_position_controller_generate_messages_lisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/rule
+
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_lisp
+
+# fast build rule for target.
+omo_r1mini_simple_position_controller_generate_messages_lisp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_generate_messages_lisp.dir/build
+.PHONY : omo_r1mini_simple_position_controller_generate_messages_lisp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule
+.PHONY : omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule
+
+# Convenience name for target.
+omo_r1mini_simple_position_controller_genlisp: omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/rule
+
+.PHONY : omo_r1mini_simple_position_controller_genlisp
+
+# fast build rule for target.
+omo_r1mini_simple_position_controller_genlisp/fast:
+	cd /home/jetson/2024-Kudos-Hackthon/catkin_ws/build && $(MAKE) -f omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/build.make omo_r1mini/omo_r1mini_simple_position_controller/CMakeFiles/omo_r1mini_simple_position_controller_genlisp.dir/build
+.PHONY : omo_r1mini_simple_position_controller_genlisp/fast
 
 # Help Target
 help:
@@ -443,31 +743,51 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... omo_r1mini_simple_position_controller_genpy"
-	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal"
-	@echo "... omo_r1mini_simple_position_controller_genlisp"
-	@echo "... test"
-	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback"
-	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult"
 	@echo "... install"
-	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult"
+	@echo "... list_install_components"
+	@echo "... omo_r1mini_simple_position_controller_genpy"
+	@echo "... edit_cache"
+	@echo "... omo_r1mini_simple_position_controller_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... omo_r1mini_simple_position_controller_gennodejs"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... omo_r1mini_simple_position_controller_geneus"
 	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionGoal"
 	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionFeedback"
-	@echo "... omo_r1mini_simple_position_controller_generate_messages"
-	@echo "... install/strip"
-	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction"
-	@echo "... omo_r1mini_simple_position_controller_generate_messages_lisp"
-	@echo "... omo_r1mini_simple_position_controller_gennodejs"
-	@echo "... omo_r1mini_simple_position_controller_generate_messages_py"
-	@echo "... omo_r1mini_simple_position_controller_generate_messages_cpp"
-	@echo "... omo_r1mini_simple_position_controller_gencpp"
-	@echo "... omo_r1mini_simple_position_controller_generate_messages_eus"
-	@echo "... omo_r1mini_simple_position_controller_geneus"
-	@echo "... edit_cache"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionGoal"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_lisp"
 	@echo "... omo_r1mini_simple_position_controller_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionResult"
+	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... omo_r1mini_simple_position_controller_gencpp"
+	@echo "... test"
+	@echo "... omo_r1mini_simple_position_controller_generate_messages_eus"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... omo_r1mini_simple_position_controller_generate_messages"
+	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionAction"
+	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionResult"
+	@echo "... _omo_r1mini_simple_position_controller_generate_messages_check_deps_VanillaPositionActionFeedback"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... omo_r1mini_simple_position_controller_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... omo_r1mini_simple_position_controller_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... omo_r1mini_simple_position_controller_genlisp"
 .PHONY : help
 
 
