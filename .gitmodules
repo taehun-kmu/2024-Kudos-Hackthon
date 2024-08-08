@@ -1,0 +1,6 @@
+[submodule "catkin_ws/src/jetson_camera"]
+	path = catkin_ws/src/jetson_camera
+	url = https://github.com/taehun-kmu/jetson_camera.git
+[submodule "catkin_ws/src/omo_r1mini"]
+	path = catkin_ws/src/omo_r1mini
+	url = https://github.com/taehun-kmu/omo_rimini.git
