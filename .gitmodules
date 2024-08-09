@@ -13,3 +13,6 @@
 [submodule "darknet_ros"]
 	path = darknet_ros
 	url = https://github.com/taehun-kmu/darknet_ros.git
+[submodule "jetson_camera"]
+	path = jetson_camera
+	url = https://github.com/taehun-kmu/jetson_camera.git
