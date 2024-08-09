@@ -10,3 +10,6 @@
 [submodule "catkin_ws/src/yolov4-for-darknet_ros"]
 	path = catkin_ws/src/yolov4-for-darknet_ros
 	url = https://github.com/taehun-kmu/yolov4-for-darknet_ros.git
+[submodule "darknet_ros"]
+	path = darknet_ros
+	url = https://github.com/taehun-kmu/darknet_ros.git
